@@ -11,7 +11,7 @@ Contact: [intelreports@kaspersky.com](mailto:intelreports@kaspersky.com)
 
 ## Prerequisites
 
-The scripts relies on the following Python dependencies repectively:
+The scripts relies on the following Python dependencies respectively:
 - datetime, os, re, sys, tarfile, termcolor
 - argparse, csv, datetime, hashlib, os, re, shutil, tarfile
 - argparse, collections, datetime, re 
