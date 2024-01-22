@@ -5,13 +5,13 @@ There are three Python3 scripts in this project, and each one has a different su
 - iShutdown_parse.py: meant to extract the Shutdown.log artifact from a target Sysdiagnose tar archive, and parses it. The output is a CSV file containing the entries in a readable format, along with the artifact's hashes (MD5, SHA1, SHA256) and processing timestamps.
 - iShutdown_stats.py: meant to extract reboot stats from a target Shutdown.log artifact. For example, first reboot, last reboot, reboots per month, etc.
 
-For more information, please read [Securelist](https://securelist.com/)
+For more information, please read [Securelist](https://securelist.com/shutdown-log-lightweight-ios-malware-detection-method/111734/)
 
 Contact: [intelreports@kaspersky.com](mailto:intelreports@kaspersky.com)
 
 ## Prerequisites
 
-The scripts relies on the following Python dependencies repectively:
+The scripts relies on the following Python dependencies respectively:
 - datetime, os, re, sys, tarfile, termcolor
 - argparse, csv, datetime, hashlib, os, re, shutil, tarfile
 - argparse, collections, datetime, re 
@@ -119,6 +119,13 @@ yyyy-mm: 3
 yyyy-mm: 4
 yyyy-mm: 10
 ```
+
+## Updates: 22 January 2024
+
+* Updated README (typos and related Securelist link)
+* Fixed an issue in iShutdown_parse to handle cross-platform temp folder for extraction
+* Added cross-platform compiled versions for all scripts using Pyinstaller
+
 
 ## To Do and Future Work
 
