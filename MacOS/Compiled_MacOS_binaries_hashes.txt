@@ -1,0 +1,14 @@
+MD5:
+iShutdown_detect		cafbe1c365f59e35db6166f2d60f3f68
+iShutdown_parse_v1.1 	ae7f5924ec3a602c8f08613318690a15
+iShutdown_stats 		248a5b154b33c2be2670f5262fdd8cd4
+
+SHA1:
+iShutdown_detect		360ed775f637ebfd9454c4522746c5663d0949f8  
+iShutdown_parse_v1.1 	f3aa35e48081ea985321d2bde7c3923e9b9764ea  
+iShutdown_stats 		b2d747d91b3f08463be0de71fe3d410049df551e  
+
+SHA256:
+iShutdown_detect		513841a74348f7e79814d01986ac2a710427ab294252911e1e202eaa958cf80b
+iShutdown_parse_v1.1 	e38c8b32af54d5e2ef30041631083b0715908c54956c63a6434ac4187fca1222
+iShutdown_stats 		c4ca2d1f99c1e10868e1213d843e53c31db09b6189dd2cb444d001a8a41923ca

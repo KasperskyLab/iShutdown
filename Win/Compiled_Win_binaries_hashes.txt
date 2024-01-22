@@ -1,0 +1,14 @@
+MD5:
+iShutdown_detect.exe		e9629ed883cbac39e7a7c24002a2891d
+iShutdown_parse_v1.1.exe	58e18b23bf002e9de0832eedc7ee6e02
+iShutdown_stats.exe			7d6bae4be9a26ae23b2da11234be9ed3
+
+SHA1:
+iShutdown_detect.exe 		83c337a68026eed8e9384cf3d1509b3884194267
+iShutdown_parse_v1.1.exe 	ac2ee7b080003184f0ef41b7a437497bb81c673c
+iShutdown_stats.exe 		98156f9fd993c5cca1313d5912d233aa66aaddb2
+
+SHA256:
+iShutdown_detect.exe 		5936bf7f43b9a23fc3e08b5c97fce4d7edc8e9b1e2e76c50623c34f4f9325ee4
+iShutdown_parse_v1.1.exe 	3e59b0c8a13d36f9eb852c44fc5ca98188d028904c23bda979e34eec8f2bc4b6
+iShutdown_stats.exe 		fa5f9eec01f0ec594f4a1cf944c1057469450c0b424ed96c39c771545febd4e0
