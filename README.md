@@ -27,7 +27,7 @@ python3 <iShutdown_script>.py
 
 ## Usage
 
-To make use of the scripts, it's essential to generate and collect a Sysdiagnose dump from a target iOS phone. Once the tar archive is available on your PC, you are ready for using the scripts.
+To make use of the scripts, it's essential to generate and collect a Sysdiagnose dump from a target iOS phone, you can follow [Apple's instructions](https://it-training.apple.com/tutorials/support/sup075). Once the tar archive is available on your PC, you are ready to use the scripts.
 
 ### iShutdown_detect
 
