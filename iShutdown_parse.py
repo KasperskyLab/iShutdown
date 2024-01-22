@@ -9,20 +9,23 @@ import re
 from datetime import datetime
 import argparse
 import shutil
+import tempfile
 
 
 def extract_log(tar_path, output_path):
-    temp_dir = "/tmp/shutdown_log_extraction"
+    temp_dir = os.path.join(tempfile.gettempdir(), "shutdown_log_extraction")
+
     if not os.path.exists(temp_dir):
         os.makedirs(temp_dir)
 
     with tarfile.open(tar_path, 'r:gz') as archive:
-        archive.extractall(path=temp_dir)
-        for member in archive.getnames():
-            if 'shutdown.log' in member:
-                log_path = os.path.join(temp_dir, member)
+        for member in archive.getmembers():
+            if 'shutdown.log' in member.name:
+                member.name = os.path.basename(member.name)  # Rename file to avoid long path
+                archive.extract(member, path=temp_dir)
+                log_path = os.path.join(temp_dir, member.name)
                 shutil.copy(log_path, output_path)
-                return os.path.join(output_path, os.path.basename(member))
+                return os.path.join(output_path, os.path.basename(member.name))
 
     raise Exception("The specific log file was not found in the archive.")
 
