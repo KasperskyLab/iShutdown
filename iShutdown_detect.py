@@ -6,16 +6,21 @@ import sys
 import re
 import tarfile
 from datetime import datetime
-from termcolor import colored
 
 
 def count_occurrences(content, target_phrase):
     return content.count(target_phrase)
 
 
-def print_colored(text, color, blink=False):
-    attrs = ['blink'] if blink else None
-    print(colored(text, color, attrs=attrs))
+def print_colored(text, color):
+    if color == 'red':
+        print("\033[91m {}\033[00m" .format(text))
+    elif color == 'yellow':
+        print("\033[93m {}\033[00m" .format(text))
+    elif color == 'green':
+        print("\033[92m {}\033[00m" .format(text))
+    else:
+        print(text)
 
 
 def find_anomalies_before_sigterm(content, anomaly_phrase, threshold=3):
