@@ -5,7 +5,7 @@ import os
 import sys
 import re
 import tarfile
-from datetime import datetime
+from datetime import datetime, timezone
 from termcolor import colored
 
 
@@ -31,7 +31,7 @@ def find_anomalies_before_sigterm(content, anomaly_phrase, threshold=3):
         elif sigterm_match := sigterm_pattern.search(line):
             if anomaly_count >= threshold:
                 unix_timestamp = int(sigterm_match.group(1))
-                anomalies_timestamps.append(datetime.utcfromtimestamp(unix_timestamp))
+                anomalies_timestamps.append(datetime.fromtimestamp(unix_timestamp, timezone.utc))
             anomaly_count = 0
 
     return anomalies_timestamps
@@ -54,7 +54,7 @@ def process_hits(content, hit_phrase):
         match = sigterm_pattern.search(line)
         if match:
             unix_timestamp = int(match.group(1))
-            date = datetime.utcfromtimestamp(unix_timestamp)
+            date = datetime.fromtimestamp(unix_timestamp, timezone.utc)
             if found_hit:
                 decoded_dates.append(date.strftime('%Y-%m-%d %H:%M:%S UTC'))
             found_hit = False
